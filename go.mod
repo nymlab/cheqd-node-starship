@@ -1,16 +1,16 @@
-module github.com/cheqd/cheqd-node/v1/starship
+module cheqd_node_starship
 
-go 1.18
+go 1.19
 
 replace github.com/strangelove-ventures/lens => github.com/Anmol1696/lens v0.1.1-0.20230331154219-5027f163133a
 
 require (
-	github.com/cosmology-tech/starship/clients/go/client v0.0.0-20230801080938-222b42996013
+	github.com/cosmology-tech/starship/clients/go/client v0.0.0-20230502170738-1ab63f187c7c
 	github.com/cosmos/cosmos-sdk v0.47.0-rc2.0.20230220103612-f094a0c33410
 	github.com/cosmos/ibc-go/v7 v7.0.0-rc0
 	github.com/stretchr/testify v1.8.4
 	github.com/tendermint/tendermint v0.37.0-rc2
-	go.uber.org/zap v1.25.0
+	go.uber.org/zap v1.24.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -30,6 +30,7 @@ require (
 	github.com/99designs/go-keychain v0.0.0-20191008050251-8e49817e8af4 // indirect
 	github.com/99designs/keyring v1.2.1 // indirect
 	github.com/ChainSafe/go-schnorrkel v0.0.0-20200405005733-88cbf1b4c40d // indirect
+	github.com/Workiva/go-datastructures v1.0.53 // indirect
 	github.com/armon/go-metrics v0.4.1 // indirect
 	github.com/avast/retry-go/v4 v4.3.3 // indirect
 	github.com/aws/aws-sdk-go v1.44.203 // indirect
@@ -42,7 +43,7 @@ require (
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chzyer/readline v1.5.1 // indirect
 	github.com/coinbase/rosetta-sdk-go/types v1.0.0 // indirect
-	github.com/cometbft/cometbft v0.37.2 // indirect
+	github.com/cometbft/cometbft v0.34.27-alpha.1 // indirect
 	github.com/cometbft/cometbft-db v0.7.0 // indirect
 	github.com/confio/ics23/go v0.9.0 // indirect
 	github.com/cosmology-tech/starship/registry v0.0.0-20230502113025-a30015992e4d // indirect
@@ -151,6 +152,7 @@ require (
 	github.com/zondax/ledger-go v0.14.1 // indirect
 	go.etcd.io/bbolt v1.3.7 // indirect
 	go.opencensus.io v0.24.0 // indirect
+	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
 	golang.org/x/crypto v0.11.0 // indirect
 	golang.org/x/exp v0.0.0-20230515195305-f3d0a9c9a5cc // indirect

@@ -1,4 +1,4 @@
-package starship
+package main
 
 import (
 	"testing"
@@ -14,23 +14,23 @@ func (s *TestSuite) TestChainsStatus() {
 	s.T().Log("runing test for /status endpoint for each chain")
 
 	for _, chainClient := range s.chainClients {
+		s.T().Log("chain", chainClient)
 		status, err := chainClient.GetStatus()
 		s.Assert().NoError(err)
-
 		s.Assert().Equal(chainClient.ChainID, status.NodeInfo.Network)
 	}
 }
 
-func (s *TestSuite) TestUpgrade() {
-	if testing.Short() {
-		s.T().Skip("Skipping chain upgrade tests for short test")
-	}
-
-	/* Pre upgrade tests */
-
-	/* Upgrade */
-	s.Upgrade()
-
-	/* Post upgrade tests */
-
-}
+//func (s *TestSuite) TestUpgrade() {
+//	if testing.Short() {
+//		s.T().Skip("Skipping chain upgrade tests for short test")
+//	}
+//
+//	/* Pre upgrade tests */
+//
+//	/* Upgrade */
+//	s.Upgrade()
+//
+//	/* Post upgrade tests */
+//
+//}

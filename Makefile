@@ -3,7 +3,7 @@ HELM_FILE = config.yaml
 
 HELM_REPO = starship
 HELM_CHART = devnet
-HELM_VERSION = 0.1.36
+HELM_VERSION = 0.1.43
 
 ###############################################################################
 ###                              Staringup                                  ###

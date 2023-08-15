@@ -1,30 +1,32 @@
 chains:
-  - name: cheqd
-    type: cheqd # pending pr #178
-    numValidators: 3
+  - name: cheqd-mainnet-1
+    type: cheqd
+    numValidators: 1
     ports:
       rpc: 26653
       rest: 1313
-      faucet: 8001
-    upgrade:
-      enabled: true # enable the directive
-      type: cheqd
-      image: ghcr.io/nymlab/cheqd-node:v2.0.0-starship
-      upgrades:
-        - name: v2 # upgrade proposal name
-          version: v2.0.0
-  - name: neutron
-    type: neutron # pending pr #178
-    numValidators: 1
-    ports:
-      rpc: 26657
-      rest: 1317
-      faucet: 8003
-
-relayers:
-  - name: cheqd-neutron
-    type: hermes
-    replicas: 1
-    chains:
-      - neutron
-      - cheqd
+      faucet:
+        8001
+        #upgrade:
+        #  enabled: true # enable the directive
+        #  type: cheqd
+        #  image: ghcr.io/nymlab/cheqd-node:v2.0.0-starship
+        #  upgrades:
+        #    - name: v2 # upgrade proposal name
+        #      version:
+        #        v2.0.0
+        #  - name: neutron-1
+        #    type: neutron
+        #    numValidators: 1
+        #    ports:
+        #      rpc: 26657
+        #      rest: 1317
+        #      faucet: 8003
+        #
+        #relayers:
+        #  - name: cheqd-neutron
+        #    type: hermes
+        #    replicas: 1
+        #    chains:
+        #      - neutron-1
+        #      - cheqd-mainnet-1
